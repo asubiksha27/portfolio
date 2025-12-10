@@ -8,7 +8,7 @@ body, html {
 /* Hero Section Background Image */
 .hero-section {
   height: 100vh;
-  background: url('../images/portfolio image.jpg') no-repeat center center/cover;
+  background: url('/images/portfolio_image.jpg') no-repeat center center/cover;
   position: relative;
   overflow: hidden;
 }
@@ -69,10 +69,9 @@ body, html {
 }
 
 /* Contact Page Background */
-/* Contact Info Page Background */
 .contact-info-section {
   height: 100vh;
-  background: url('../images/contact_bg.jpg') no-repeat center center/cover;
+  background: url('/images/contact_bg.jpg') no-repeat center center/cover;
   position: relative;
   overflow: hidden;
   padding: 60px 20px;
@@ -89,36 +88,21 @@ body, html {
   z-index: 1;
 }
 
-/* Contact Info Text Styling */
 .contact-info-section .container {
   position: relative;
   z-index: 2;
 }
 
-/* Moving Gradient Text for Heading */
-.gradient-text {
-  background: linear-gradient(270deg, #ff6ec7, #f9d423, #ff4e50, #40e0d0);
-  background-size: 600% 600%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textAnimation 6s ease infinite;
-}
-
-@keyframes textAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+/* About page */
 .about-section {
-  margin-top: 56px; /* offset for fixed navbar height */
+  margin-top: 56px;
   display: flex;
-  height: calc(100vh - 56px); /* full viewport height minus navbar */
+  height: calc(100vh - 56px);
   overflow: hidden;
   position: relative;
   flex-wrap: nowrap;
 }
 
-/* Left and Right sides container styles */
 .about-left,
 .about-right {
   position: relative;
@@ -129,54 +113,49 @@ body, html {
   align-items: center;
 }
 
-/* Content box with semi-transparent dark background */
+/* Content box */
 .content-box {
-  background: rgba(0, 0, 0, 0.65); /* dark translucent box */
+  background: rgba(0, 0, 0, 0.65);
   padding: 2rem 3rem;
   border-radius: 12px;
-  color: #fff; /* bright white text */
+  color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   text-align: center;
   max-width: 400px;
 }
 
-/* School box specific tweaks: wider and moved right */
 .about-left .content-box {
-  margin-left: 18rem;  /* move right */
-  max-width: 500px;   /* wider box */
+  margin-left: 18rem;
+  max-width: 500px;
 }
 
-/* Institutional box default position and size */
 .about-right .content-box {
   margin-left: 0;
   max-width: 400px;
 }
 
-/* Heading styles */
 .content-box h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ff6ec7; /* pink heading */
-  text-shadow:
-    0 0 10px #ff6ec7;
+  color: #ff6ec7;
+  text-shadow: 0 0 10px #ff6ec7;
 }
 
-/* Paragraph styles */
 .content-box p {
   font-size: 1.2rem;
   line-height: 1.6;
 }
 
-/* Background images for each side */
+/* Background images */
 .about-left {
-  background: url('../images/school image.avif') no-repeat center center/cover;
+  background: url('/images/school_image.avif') no-repeat center center/cover;
 }
 
 .about-right {
-  background: url('../images/clg image.jpg') no-repeat center center/cover;
+  background: url('/images/clg_image.jpg') no-repeat center center/cover;
 }
 
-/* Responsive: stack vertically on small screens */
+/* Responsive */
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;
@@ -185,7 +164,6 @@ body, html {
   .about-right {
     min-height: 50vh;
   }
-  /* Remove margin on small screens for better fit */
   .about-left .content-box {
     margin-left: 0;
     max-width: 90%;
@@ -194,28 +172,30 @@ body, html {
     max-width: 90%;
   }
 }
+
+/* Skills page */
 .skills-section {
   min-height: 100vh;
-  background: url('../images/skills_bg.jpg') no-repeat center center/cover;
+  background: url('/images/skills_bg.jpg') no-repeat center center/cover;
   position: relative;
-  padding-top: 70px; /* offset navbar */
+  padding-top: 70px;
   z-index: 0;
 }
 
 .skills-section .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
 .skills-section > .container {
   position: relative;
-  z-index: 1; /* above overlay */
+  z-index: 1;
 }
 
 .skill-box h3 {
-  color: #ff6ec7; /* pink heading */
+  color: #ff6ec7;
   margin-bottom: 0.75rem;
   text-shadow: 0 0 8px #ff6ec7;
 }
@@ -225,54 +205,21 @@ body, html {
   color: #eee;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .skill-box {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-}
-/* Common styles for all three pages */
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
-  color: #eee;
-}
-
-/* Navbar fix for all pages */
-.navbar {
-  z-index: 1030; /* above overlays */
-}
-
-/* --- projects.html --- */
+/* Projects page */
 .projects-list-section {
   min-height: 100vh;
-  background: url('../images/project_bg.jpg') no-repeat center center/cover;
+  background: url('/images/project_bg.jpg') no-repeat center center/cover;
   position: relative;
-  padding-top: 70px; /* offset for fixed navbar */
+  padding-top: 70px;
   z-index: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  color: white;
 }
 
 .projects-list-section .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* dark translucent overlay */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
-}
-
-.projects-list-section > .container {
-  position: relative;
-  z-index: 1; /* above overlay */
 }
 
 .project-btn {
@@ -283,214 +230,46 @@ body, html {
   padding: 14px 40px;
   border-radius: 30px;
   margin: 0.8rem;
-  transition: background 0.3s ease;
   text-decoration: none;
-  display: inline-block;
-  min-width: 280px;
 }
 
-.project-btn:hover {
-  background: #ff4e99;
-  text-decoration: none;
-  color: white;
-}
-
-/* --- project1.html --- */
+/* project1 */
 .project1-section {
   min-height: 100vh;
-  background: url('../images/steel_fault.jpg') no-repeat center center/cover;
+  background: url('/images/interview.jpg') no-repeat center center/cover;
   position: relative;
-  padding-top: 70px; /* offset for fixed navbar */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #eee;
+  padding-top: 70px;
   text-align: center;
   z-index: 0;
-  padding-bottom: 50px;
 }
 
 .project1-section .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
-  z-index: 0;
 }
 
-.project1-section > .container {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-}
-
-.project1-section h1 {
-  color: #3399ff;
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 0 12px #ff6ec7;
-}
-
-.project1-section p.lead {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  color: #ddd;
-}
-
-.project1-section .btn-pink {
-  background: #ff6ec7;
-  border: none;
-  color: white;
-  font-size: 1.1rem;
-  padding: 12px 28px;
-  border-radius: 30px;
-  transition: background 0.3s ease;
-  margin: 0.5rem;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.project1-section .btn-pink:hover {
-  background: #ff4e99;
-  text-decoration: none;
-  color: white;
-}
-
-.project1-section .btn-outline-light {
-  border-color: white;
-  color: white;
-  font-size: 1.1rem;
-  padding: 12px 28px;
-  border-radius: 30px;
-  margin: 0.5rem;
-  display: inline-block;
-  text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.project1-section .btn-outline-light:hover {
-  background: white;
-  color: #ff6ec7;
-  text-decoration: none;
-}
-
-/* --- project2.html --- */
+/* project2 */
 .project2-section {
   min-height: 100vh;
-  background: url('../images/stress_diagnosis.jpg') no-repeat center center/cover;
+  background: url('/images/team_tasker.jpg') no-repeat center center/cover;
   position: relative;
   padding-top: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #eee;
   text-align: center;
-  z-index: 0;
-  padding-bottom: 50px;
 }
 
 .project2-section .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
-  z-index: 0;
 }
 
-.project2-section > .container {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-}
-
-.project2-section h1 {
-  color: #ff6ec7;
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 0 12px #ff6ec7;
-}
-
-.project2-section p.lead {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  color: #ddd;
-}
-
-.project2-section .btn-pink {
-  background: #ff6ec7;
-  border: none;
-  color: white;
-  font-size: 1.1rem;
-  padding: 12px 28px;
-  border-radius: 30px;
-  transition: background 0.3s ease;
-  margin: 0.5rem;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.project2-section .btn-pink:hover {
-  background: #ff4e99;
-  text-decoration: none;
-  color: white;
-}
-
-.project2-section .btn-outline-light {
-  border-color: white;
-  color: white;
-  font-size: 1.1rem;
-  padding: 12px 28px;
-  border-radius: 30px;
-  margin: 0.5rem;
-  display: inline-block;
-  text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.project2-section .btn-outline-light:hover {
-  background: white;
-  color: #ff6ec7;
-  text-decoration: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .project-btn {
-    min-width: 100%;
-  }
-  .project1-section > .container,
-  .project2-section > .container,
-  .projects-list-section > .container {
-    padding: 0 15px;
-  }
-  .project1-section h1,
-  .project2-section h1 {
-    font-size: 2.2rem;
-  }
-}
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
-  color: #eee;
-}
-
-/* Navbar fix for all pages */
-.navbar {
-  z-index: 1030;
-}
-
-/* Achievements Section */
+/* Achievements */
 .achievements-section {
   min-height: 100vh;
-  background: url('../images/Achievement.jpg') no-repeat center center/cover;
+  background: url('/images/achievement.jpg') no-repeat center center/cover;
   position: relative;
   padding-top: 70px;
-  z-index: 0;
   text-align: center;
 }
 
@@ -498,64 +277,4 @@ body, html {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 0;
-}
-
-.achievements-section > .container {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-}
-
-.achievements-section h1 {
-  color: #ff6ec7;
-  font-size: 3rem;
-  text-shadow: 0 0 12px #ff6ec7;
-  margin-bottom: 3rem;
-}
-
-.achievement-card {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 0 10px rgba(255, 110, 199, 0.5);
-}
-
-.achievement-card h3 {
-  color: #ff6ec7;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  text-shadow: 0 0 10px #ff6ec7;
-}
-
-.achievement-card p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #ddd;
-}
-
-.btn-pink {
-  background: #ff6ec7;
-  border: none;
-  color: white;
-  font-size: 1.1rem;
-  padding: 12px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.btn-pink:hover {
-  background: #ff4e99;
-  color: white;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .achievements-section h1 {
-    font-size: 2.2rem;
-  }
-  .achievement-card {
-    padding: 1.5rem;
-  }
 }
